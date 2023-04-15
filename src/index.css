@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Ubuntu", sans-serif;
+  background: hsl(231, 100%, 99%);
+  color: hsl(231, 11%, 63%);
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.5rem;
+  color: hsl(213, 96%, 18%);
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: .9rem;
+  color: hsl(213, 96%, 18%);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.container {
+  height: 100svh;
+  background-image: url(./images/bg-sidebar-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top left;
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+}
+
+.indicator div {
+  width: 2rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 600;
+}
+
+.indicator .active {
+  background: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%);
+  border: 0;
+}
+
+.form,
+.done {
+  width: 90%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 20px 10px hsla(217, 100%, 97%, 70%);
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.input-box > :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-box > :first-child div {
+  font-size: .8rem;
+  color: hsl(354, 84%, 57%);
+}
+
+.input-box label {
+  color: hsl(213, 96%, 18%);
+  text-transform: capitalize;
+  font-size: 0.8rem;
+}
+
+.input-box input {
+  border: 1px solid hsl(229, 24%, 87%);
+  outline: none;
+  padding: 0.7em;
+  border-radius: 5px;
+  color: hsl(213, 96%, 18%);
+  font-size: .9rem;
+}
+
+.input-box input::placeholder {
+  font-size: 0.9rem;
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+}
+
+.input-box .invalid {
+  border-color: hsl(354, 84%, 57%);
+}
+
+.input-box .valid {
+  border-color: green;
+}
+
+.footer {
+  position: fixed;
+  inset: auto 0 0 0;
+  background: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.footer > :last-child {
+  margin-left: auto;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: hsl(213, 96%, 18%);
+  color: #fff;
+  font-weight: 500;
+}
+
+.plan,
+.addon {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .9rem;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 5px;
+}
+
+.plan h2 {
+  margin-bottom: .3em;
+}
+
+.selected {
+  border-color: hsl(243, 100%, 62%);
+  background: hsl(217, 100%, 97%);
+}
+
+.duration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: hsl(231, 100%, 99%);
+  border-radius: 10px;
+  text-transform: capitalize;
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+.duration input {
+  width: 2.2rem;
+  height: 1.2rem;
+  appearance: none;
+  background: hsl(213, 96%, 18%);
+  border-radius: .6rem;
+  padding: .2rem;
+}
+
+.duration input::-webkit-slider-thumb {
+  appearance: none;
+  width: .8rem;
+  aspect-ratio: 1;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.addon {
+  font-size: .7rem;
+  text-transform: capitalize;
+  gap: .7rem;
+}
+
+.addon > :last-child {
+  margin-left: auto;
+  color: hsl(243, 100%, 62%);
+  text-transform: lowercase;
+}
+
+.checkbox {
+  width: 1rem;
+  aspect-ratio: 1;
+  border: 1px solid hsl(229, 24%, 87%);;
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+}
+
+.checked {
+  border: 0;
+  background-color: hsl(243, 100%, 62%);
+}
+
+.picked {
+  background: hsl(217, 100%, 97%);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-block: 2rem;
+  font-size: .9rem;
+}
+
+.picked > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.picked > div:first-child {
+  text-transform: capitalize;
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+
+.picked > div:first-child span {
+  color: hsl(231, 11%, 63%);
+  text-decoration-line: underline;
+}
+
+.picked > div:last-child {
+  border-top: 1px solid hsl(229, 24%, 87%);
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+
+.picked > div:last-child > div > :last-child {
+  color: hsl(213, 96%, 18%);
+}
+
+.picked + div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.picked + div span {
+  color: hsl(243, 100%, 62%);
+}
+
+.done {
+  display: flex;
+  padding-block: 3rem;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5rem;
+}
